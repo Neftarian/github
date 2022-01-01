@@ -1,0 +1,5 @@
+import './config'
+import './global'
+import './helper'
+import './pages'
+import './plugin'

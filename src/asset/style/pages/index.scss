@@ -1,0 +1,144 @@
+@import '../config/variable.scss';
+
+.Showcase {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $color-navy;
+    color: white;
+    text-align: center;
+    @media only screen and (min-width:$mobil) {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    @media only screen and (max-width: $mobil) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &-container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    &-title {
+        @media only screen and (min-width: $mobil) {
+            font-size: 3em;
+        }
+    }
+    &-subtitle {
+        @media only screen and (min-width: $mobil) {
+            font-size: 1.4em;
+        }
+    }
+
+    &-search {
+        background-color: $color-yellow;
+        padding: 50px 50px;
+        margin-top: 30px;
+        box-shadow: 0 20px 40px rgba($color: #000000, $alpha: 0.2);
+        text-align: left;
+        @media only screen and (min-width: $mobil) {
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @media only screen and (max-width: $mobil) {
+            padding: $gutter;
+        }
+    
+        &-form {
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            
+            
+            @media only screen and (max-width: $mobil) {
+                flex-direction: column;
+            }
+            &-item {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                width: 100%;
+                
+
+                    .button {
+                        margin-top: 5px;
+                        margin-left: 0;
+                    }
+                    @media only screen and (min-width: $mobil) {
+                        & + & {
+                            margin-left: 10px;
+                        }
+                    }
+                
+               @media only screen and (max-width: $mobil) {
+                width: 100%;
+                    & + & {
+                    margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    }
+    .for-work {
+       
+
+        @media only screen and (max-width: $mobil) {
+        margin-bottom: 15px;
+        font-size: $font-size-small;
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        position: relative;
+        
+        }
+        @media only screen and (min-width: $tablet) {
+            position: absolute;
+            top: calc(#{$finger-size} + 20px);
+            right: 0;
+        }
+        
+    }
+    &-shortlink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        @media only screen and (max-width:$mobil) {
+            flex-direction: column;
+        }
+        a {
+            color: inherit;
+            margin-left: 10px;
+            margin-right: 10px;
+            &:hover {
+                text-decoration: underline;
+            }
+            @media only screen and (max-width:$mobil) {
+                    margin-bottom: 10px;
+            }
+            
+        }
+    }
+}
+
+.Highlights {
+
+    &-slider {
+        height: 100%;
+        width: 100%;
+    }
+
+    &-item {
+        width: 33%;
+        height: 120px;
+        background: yellow;
+    }
+
+    
+}

@@ -1,0 +1,107 @@
+@import '../config/variable.scss';
+
+//
+
+
+.Header {  
+    height: 68px;
+    .show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &-logo {
+            img {
+                width: 144px;
+            }
+    };
+    &-switch {
+        margin-left: auto;
+        display: none;
+        @media only screen and (max-width: $mobil) {
+            display: block;
+        }
+        }
+    
+    &-menu {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        a {
+            width: auto;
+        }
+        @media only screen and (max-width: $mobil) {
+            a {
+                width: 100%;
+            }
+            display: flex;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: .2s;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 68px;
+            padding-right: $gutter;
+            padding-left: $gutter;
+            padding-bottom: 20px;
+            background-color: white;
+            flex-direction: column;
+            z-index: 1;
+            box-shadow: 0 20px 30px rgba($color: black, $alpha: 0.2);
+        }
+
+        &-user {
+            display: flex;
+            @media only screen and (max-width: $mobil) {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            a {
+                width: 100%;
+                display: inline-flex;
+                align-items: center;
+                height: $finger-size;
+                padding-left: 10px;
+                padding-right: 10px;
+                &:hover {
+                    background-color: #ddd;
+                }
+                @media only screen and (max-width: $mobil) {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+        
+
+        &-helper {
+            select {
+                appearance: none;
+                height: $finger-size;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-color: #ddd;
+                color: $color-navy;
+                background-color: transparent;
+                &:nth-child(1) {
+                    position: relative;
+                    left: 4px;
+                    border-right-width: 0px;
+                    border-top-left-radius: $border-radius;
+                    border-bottom-left-radius: $border-radius;
+                }
+                &:nth-child(2) {
+                    border-top-right-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
+
+                }
+            }
+            @media only screen and (max-width: $mobil) {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
